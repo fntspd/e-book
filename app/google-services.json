@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "901591102172",
+    "project_id": "e-book-app-e7645",
+    "storage_bucket": "e-book-app-e7645.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:901591102172:android:2d4bc4d0b7ea0bb418fa19",
+        "android_client_info": {
+          "package_name": "com.fenton.librarymanagementsystem"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASFE01Oh3t7bDA3ZUbBattmiebfi0UfDs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
