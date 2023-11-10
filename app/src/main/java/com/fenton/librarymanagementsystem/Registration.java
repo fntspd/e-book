@@ -1,8 +1,5 @@
 package com.fenton.librarymanagementsystem;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -11,6 +8,9 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -31,28 +31,29 @@ public class Registration extends AppCompatActivity {
     public void onStart() {
         super.onStart();
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        if(currentUser != null){
+        if (currentUser != null) {
             Intent intent = new Intent(getApplicationContext(), AdminPanel.class);
             startActivity(intent);
             finish();
         }
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
-        mAuth=FirebaseAuth.getInstance();
-        editTextEmail=findViewById(R.id.EmailAddress);
-        editTextpassword=findViewById(R.id.Password);
-        editTextName=findViewById(R.id.FullName);
+        mAuth = FirebaseAuth.getInstance();
+        editTextEmail = findViewById(R.id.EmailAddress);
+        editTextpassword = findViewById(R.id.Password);
+        editTextName = findViewById(R.id.FullName);
         progressBar = findViewById(R.id.progressbar);
-        buttonReg=findViewById(R.id.button_register);
-        loginnow=findViewById(R.id.loginnow);
+        buttonReg = findViewById(R.id.button_register);
+        loginnow = findViewById(R.id.loginnow);
 
         loginnow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -63,21 +64,21 @@ public class Registration extends AppCompatActivity {
             public void onClick(View view) {
                 progressBar.setVisibility(View.VISIBLE);
                 String email, password;
-                email=String.valueOf(editTextEmail.getText());
-                password=String.valueOf(editTextpassword.getText());
+                email = String.valueOf(editTextEmail.getText());
+                password = String.valueOf(editTextpassword.getText());
 //                fullname=String.valueOf(editTextName.getText());
 //
 //                if (TextUtils.isEmpty(fullname)){
 //                    Toast.makeText(Registration.this, "Enter Your Name",Toast.LENGTH_SHORT).show();
 //                    return;
 //                }
-                if (TextUtils.isEmpty(email)){
-                    Toast.makeText(Registration.this, "Enter valid email",Toast.LENGTH_SHORT).show();
+                if (TextUtils.isEmpty(email)) {
+                    Toast.makeText(Registration.this, "Enter valid email", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                if (TextUtils.isEmpty(password)){
-                    Toast.makeText(Registration.this, "Enter password",Toast.LENGTH_SHORT).show();
+                if (TextUtils.isEmpty(password)) {
+                    Toast.makeText(Registration.this, "Enter password", Toast.LENGTH_SHORT).show();
                     return;
                 }
 

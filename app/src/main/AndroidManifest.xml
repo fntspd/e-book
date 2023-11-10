@@ -15,6 +15,18 @@
         android:theme="@style/Theme.LibraryManagementSystem"
         tools:targetApi="31">
         <activity
+            android:name=".ViewBook"
+            android:exported="false" />
+        <activity
+            android:name=".DeleteBook"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateBook"
+            android:exported="false" />
+        <activity
+            android:name=".addbook"
+            android:exported="false" />
+        <activity
             android:name=".AdminPanel"
             android:exported="false" />
         <activity

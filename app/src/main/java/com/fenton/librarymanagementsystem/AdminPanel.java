@@ -3,6 +3,7 @@ package com.fenton.librarymanagementsystem;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -22,12 +23,17 @@ public class AdminPanel extends AppCompatActivity {
     Toolbar toolbar;
     FirebaseAuth auth;
     ImageView logout;
+    CardView addbook, updatebook, viewbook, deletebook;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_panel);
         auth = FirebaseAuth.getInstance();
         logout = findViewById(R.id.admin_logout);
+        addbook = findViewById(R.id.addbook);
+        updatebook = findViewById(R.id.updatebook);
+        viewbook = findViewById(R.id.viewbook);
+        deletebook = findViewById(R.id.deletebook);
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +55,38 @@ public class AdminPanel extends AppCompatActivity {
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_open,R.string.navigation_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+
+        addbook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(getApplicationContext(),addbook.class);
+                startActivity(intent);
+            }
+        });
+
+        updatebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(getApplicationContext(),UpdateBook.class);
+                startActivity(intent);
+            }
+        });
+
+        viewbook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(getApplicationContext(),ViewBook.class);
+                startActivity(intent);
+            }
+        });
+
+        deletebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(getApplicationContext(),DeleteBook.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

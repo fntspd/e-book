@@ -25,7 +25,7 @@
         android:layout_height="match_parent">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardView4"
+            android:id="@+id/deletebook"
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:layout_marginEnd="24dp"
@@ -64,7 +64,7 @@
             android:layout_height="59dp"
             android:background="@drawable/header"
             android:paddingLeft="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/cardView1"
+            app:layout_constraintBottom_toTopOf="@+id/addbook"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -100,15 +100,15 @@
         </androidx.appcompat.widget.Toolbar>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardView1"
+            android:id="@+id/addbook"
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:backgroundTint="@color/white"
             android:orientation="vertical"
             app:cardCornerRadius="15dp"
             app:cardElevation="12dp"
-            app:layout_constraintBottom_toTopOf="@+id/cardView3"
-            app:layout_constraintEnd_toStartOf="@+id/cardView"
+            app:layout_constraintBottom_toTopOf="@+id/viewbook"
+            app:layout_constraintEnd_toStartOf="@+id/updatebook"
             app:layout_constraintHorizontal_bias="0.508"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -137,7 +137,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardView"
+            android:id="@+id/updatebook"
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:layout_marginTop="16dp"
@@ -145,7 +145,7 @@
             android:backgroundTint="@color/white"
             app:cardCornerRadius="15dp"
             app:cardElevation="12dp"
-            app:layout_constraintBottom_toTopOf="@+id/cardView4"
+            app:layout_constraintBottom_toTopOf="@+id/deletebook"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.902"
@@ -173,7 +173,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardView3"
+            android:id="@+id/viewbook"
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:layout_marginBottom="252dp"
@@ -181,7 +181,7 @@
             app:cardCornerRadius="15dp"
             app:cardElevation="12dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/cardView4"
+            app:layout_constraintEnd_toStartOf="@+id/deletebook"
             app:layout_constraintHorizontal_bias="0.507"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="MissingConstraints">
