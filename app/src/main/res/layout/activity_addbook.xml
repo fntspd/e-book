@@ -1,85 +1,88 @@
-<!-- res/layout/activity_main.xml -->
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".addbook">
 
-    <!-- Book ID -->
-    <TextView
-        android:id="@+id/textViewBookId"
-        android:layout_width="wrap_content"
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:text="Book ID"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"/>
+        android:hint="Book Id"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.855">
 
-    <EditText
-        android:id="@+id/editTextBookId"
-        android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/bookid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textViewBookId"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="8dp"
-        android:inputType="number"/>
+        android:layout_marginBottom="8dp"
+        android:hint="Book Name"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
 
-    <!-- Book Name -->
-    <TextView
-        android:id="@+id/textViewBookName"
-        android:layout_width="wrap_content"
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout3"
+        android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:text="Book Name"
-        android:layout_below="@id/editTextBookId"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"/>
+        android:layout_marginBottom="64dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/openfilechooser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
 
-    <EditText
-        android:id="@+id/editTextBookName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textViewBookName"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="8dp"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Author Name" />
 
-    <!-- Author Name -->
-    <TextView
-        android:id="@+id/textViewAuthorName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Author Name"
-        android:layout_below="@id/editTextBookName"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/editTextAuthorName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textViewAuthorName"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="8dp"/>
-
-    <!-- Choose File Button -->
     <Button
-        android:id="@+id/buttonChooseFile"
+        android:id="@+id/openfilechooser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Choose File"
-        android:layout_below="@id/editTextAuthorName"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"/>
+        android:layout_marginBottom="28dp"
+        style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+        android:text="Upload a file"
+        app:layout_constraintBottom_toTopOf="@+id/addbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- Submit Button -->
     <Button
-        android:id="@+id/buttonSubmit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Submit"
-        android:layout_below="@id/buttonChooseFile"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"/>
-</RelativeLayout>
+        android:id="@+id/addbutton"
+        android:layout_width="119dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="232dp"
+
+        android:text="ADD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
