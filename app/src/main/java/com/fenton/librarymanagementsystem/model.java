@@ -1,12 +1,17 @@
 package com.fenton.librarymanagementsystem;
 
 public class model {
-    String bookid, bookname, authorname;
+    String bookid, bookname, authorname, surl;
 
-    public model(String bookid, String bookname, String authorname) {
+    model(){
+
+    }
+
+    public model(String bookid, String bookname, String authorname, String surl) {
         this.bookid = bookid;
         this.bookname = bookname;
         this.authorname = authorname;
+        this.surl = surl;
     }
 
     public String getBookid() {
@@ -31,5 +36,13 @@ public class model {
 
     public void setAuthorname(String authorname) {
         this.authorname = authorname;
+    }
+
+    public String getSurl() {
+        return surl;
+    }
+
+    public void setSurl(String surl) {
+        this.surl = surl;
     }
 }

@@ -67,7 +67,7 @@ public class AdminPanel extends AppCompatActivity {
         updatebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(getApplicationContext(),UpdateBook.class);
+                Intent intent= new Intent(getApplicationContext(),AdminView.class);
                 startActivity(intent);
             }
         });
@@ -75,7 +75,7 @@ public class AdminPanel extends AppCompatActivity {
         viewbook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(getApplicationContext(),ViewBook.class);
+                Intent intent= new Intent(getApplicationContext(),AdminView.class);
                 startActivity(intent);
             }
         });

@@ -34,6 +34,7 @@ public class addbook extends AppCompatActivity {
         bookname=findViewById(R.id.bookname);
         authorname=findViewById(R.id.authorname);
 
+        Button uploadimage = findViewById(R.id.uploadimage);
         Button chooseFileButton = findViewById(R.id.openfilechooser);
         addbutton=findViewById(R.id.addbutton);
 
