@@ -89,8 +89,8 @@
 
     <Button
         android:id="@+id/addbutton"
-        android:layout_width="119dp"
-        android:layout_height="56dp"
+        android:layout_width="112dp"
+        android:layout_height="52dp"
         android:layout_marginBottom="212dp"
         android:text="ADD"
         app:layout_constraintBottom_toBottomOf="parent"

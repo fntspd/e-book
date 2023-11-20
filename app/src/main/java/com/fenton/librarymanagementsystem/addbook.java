@@ -75,7 +75,19 @@ public class addbook extends AppCompatActivity {
                     }
                 });
     }
-    
+
+    private void uploadimage(){
+        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+        intent.setType("*/*");
+        intent.addCategory(Intent.CATEGORY_OPENABLE);
+
+        try {
+            startActivityForResult(Intent.createChooser(intent, "Select a File to Upload"), PICK_FILE_REQUEST,null);
+        } catch (android.content.ActivityNotFoundException ex) {
+            // Handle errors
+            Toast.makeText(this, "Please install a File Manager.", Toast.LENGTH_SHORT).show();
+        }
+    }
     private void openFileChooser() {
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
         intent.setType("*/*");  // You can specify the type of files you want to allow here, e.g., "image/*" for images
